@@ -3,51 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Καλώς ήρθατε στον Κόσμο της Πληροφορικής</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Πληροφορική</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .section { display: none; }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Καλώς ήρθατε στον Κόσμο της Πληροφορικής!</h1>
-        <p>Το σχολείο που βλέπει το μέλλον διαφορετικά.</p>
-    <a href="about.html">Πήγαινε στην σελίδα Πληροφορικής</a>
+        <h1>Πληροφορική: Από τον κόσμο του σήμερα, στον κόσμο του αύριο!</h1>
+        <h2>Εκπαιδευτήρια Ατσόγλου</h2>
     </header>
-<footer>
-    <p>&copy; 2025 - Informatics Website</p>
-  </footer>
+    
+    <main>
+        <section>
+            <h2>Μαθήματα ανά τάξη</h2>
+            <ul>
+                <li><a href="#" onclick="showClass('gymnasio')">Γυμνάσιο</a></li>
+                <li><a href="#" onclick="showClass('lykeio')">Λύκειο</a></li>
+            </ul>
+        </section>
 
-    <nav>
-        <ul>
-            <li><a href="#mathimata">Μαθήματα</a></li>
-            <li><a href="#askhseis">Ασκήσεις</a></li>
-            <li><a href="#info">Πληροφορίες</a></li>
-        </ul>
-    </nav>
+        <div id="gymnasio" class="section">
+            <h3>Γυμνάσιο</h3>
+            <ul>
+                <li><a href="#a-gymnasiou">Α' Γυμνασίου</a></li>
+                <li><a href="#b-gymnasiou">Β' Γυμνασίου</a></li>
+                <li><a href="#g-gymnasiou">Γ' Γυμνασίου</a></li>
+            </ul>
+        </div>
 
-    <section id="mathimata">
-        <h2>Μαθήματα</h2>
-        <ul>
-            <li><a href="#">Α' Λύκειο</a></li>
-            <li><a href="#">Β' Γυμνασίου</a></li>
-            <li><a href="#">Γ' Γυμνασίου</a></li>
-        </ul>
-    </section>
-
-    <section id="askhseis">
-        <h2>Ασκήσεις</h2>
-        <p>Διαδραστικές ασκήσεις για κάθε τάξη και θέμα.</p>
-    </section>
-
-    <section id="info">
-        <h2>Πληροφορίες</h2>
-        <p>Μάθετε περισσότερα για την ιστοσελίδα και τους στόχους μας.</p>
-    </section>
+        <div id="lykeio" class="section">
+            <h3>Λύκειο</h3>
+            <ul>
+                <li><a href="#a-lykeiou">Α' Λύκειο</a></li>
+                <li><a href="#b-lykeiou">Β' Λύκειο</a></li>
+                <li><a href="#g-lykeio">Γ' Λύκειο</a></li>
+            </ul>
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Informatics Website</p>
+        <p>&copy; 2025 Liofis Dimitris. Όλα τα δικαιώματα διατηρούνται.</p>
     </footer>
+
+    <script>
+        function showClass(classType) {
+            // Αρχικά κρύβουμε όλες τις ενότητες
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Εμφανίζουμε την αντίστοιχη ενότητα
+            const selectedSection = document.getElementById(classType);
+            selectedSection.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
-
 
